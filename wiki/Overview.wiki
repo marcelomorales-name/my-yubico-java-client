@@ -1,8 +1,6 @@
-#Drop-in replacement for the demo yubikey java client API
-
 = Introduction =
 
-It is designed as a drop-in replacement for [http://code.google.com/p/yubico-java-client/], which is referenced on the [http://www.yubico.com/developers/api/ Yubico Web Service API webpage].
+My Yubico Java Client is designed as a drop-in replacement for [http://code.google.com/p/yubico-java-client/], which is referenced on the [http://www.yubico.com/developers/api/ Yubico Web Service API webpage].
 
 This one has some additional features that I could not live without.
 
