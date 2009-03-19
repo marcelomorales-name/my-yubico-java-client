@@ -1,0 +1,48 @@
+<!--
+  DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
+
+  PLEASE KEEP UTF-8 ENCODING
+
+  Copyright (C) 2008 Marcelo Morales (marcelomorales.name@gmail.com)
+
+    This file is part of My Yubico Java Client.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  under the License.
+-->
+<body>
+    <h1>My Yubico Java Client</h1>
+
+    <p>It is designed as a drop-in replacement for
+        <a href="http://code.google.com/p/yubico-java-client/"><code>http://code.google.com/p/yubico-java-client/</code></a>,
+        which is referenced on the <a href="http://www.yubico.com/developers/api/">Yubico Web Service API webpage</a>.
+    It has some additional features that I could not live without.</p>
+
+    <ul>
+        <li>Supports the complete protocol as specified on <a href="http://www.yubico.com/developers/api/">Yubico Web
+        Service API webpage</a>. On future versions, it will support every other alternative as I dive deep into the
+        server code.</li>
+        <li>Generates and verifies the HMAC digital signatures.</li>
+        <li>Uses a precise and well known Java idiom, which can be used with any level of detail.</li>
+        <li>Uses <a href="http://maven.apache.org">Apache Maven</a>.</li>
+        <li>JDK 1.4 compatible (for our poor fellas on enterprise computing which are stuck).</li>
+    </ul>
+    <h2>TODO list</h2>
+    <ul>
+        <li>Spring security, jsecurity integration.</li>
+        <li>Threadpooled for control in high demand scenarios.</li>
+        <li>Non-attended testing</li>
+        <li>Verification in different JVM implementations (I work with SUN)</li>
+        <li></li>
+    </ul>
+</body>
