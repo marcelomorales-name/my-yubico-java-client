@@ -27,6 +27,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.net.URLEncoder;
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
 import java.util.Iterator;
@@ -156,14 +157,14 @@ public class YubicoClient {
 
             URL srv;
             if (sharedSecret == null) {
-                srv = new URL(SECURE_YUBICO_URI + "?id=" + clientId + "&otp=" + otp);
+                srv = new URL(SECURE_YUBICO_URI + "?id=" + clientId + "&otp=" + URLEncoder.encode(otp, "UTF-8"));
             } else {
-                String toSign = "id=" + clientId + "&otp=" + otp;
+                String toSign = "id=" + clientId + "&otp=" + URLEncoder.encode(otp, "UTF-8");
                 String hmac = new String(Base64.encodeBase64(mac.doFinal(toSign.getBytes())));
                 if (useSSL) {
-                    srv = new URL(SECURE_YUBICO_URI + "?" + toSign + "&h=" + hmac);
+                    srv = new URL(SECURE_YUBICO_URI + "?" + toSign + "&h=" + URLEncoder.encode(hmac, "UTF-8"));
                 } else {
-                    srv = new URL(INSECURE_YUBICO_URI + "?" + toSign + "&h=" + hmac);
+                    srv = new URL(INSECURE_YUBICO_URI + "?" + toSign + "&h=" + URLEncoder.encode(hmac, "UTF-8"));
                 }
             }
             request = srv.toString();
