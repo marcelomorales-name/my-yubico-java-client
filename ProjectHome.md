@@ -1,0 +1,2 @@
+It is designed as a drop-in replacement for http://code.google.com/p/yubico-java-client/ which is referenced on the Yubico Web Service API webpage (http://www.yubico.com/developers/api/). It has some additional features that I could not live without.
+This is more production-ready than showing off how the technology works (which seems to be the other project's goal).
